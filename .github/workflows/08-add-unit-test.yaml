@@ -41,7 +41,7 @@ jobs:
         # for simple tests (npm test, etc.) just run a local image in docker
       - name: Unit Testing in Docker
         run: |
-          docker run --rm ${{ github.run_id }} ping 127.0.0.1
+          docker run --rm ${{ github.run_id }} ping -c3 127.0.0.1
 #NEW: (END) ############################################################
 
       - name: Docker Metadata for Final Image Build
